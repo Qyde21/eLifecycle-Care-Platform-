@@ -11,10 +11,24 @@ export type SpokeId =
 
 export type LifecycleStage = 'active-care' | 'refurbish' | 'harvest-spares' | 'end-of-life';
 
+export type TelecomCategory = 
+  | 'telecom-rru'
+  | 'telecom-antenna'
+  | 'optical-splicer'
+  | 'base-band-unit'
+  | 'microwave-link'
+  | 'otdr-tester'
+  | 'solar-inverter'
+  | 'industrial-iot'
+  | 'enterprise-scanner'
+  | 'laptop'
+  | 'smartphone'
+  | 'medical-telemetry';
+
 export interface Device {
   id: string;
   name: string;
-  category: 'smartphone' | 'laptop' | 'industrial-iot' | 'solar-inverter' | 'medical-telemetry' | 'enterprise-scanner';
+  category: TelecomCategory;
   model: string;
   serialNumber: string;
   purchaseDate: string;

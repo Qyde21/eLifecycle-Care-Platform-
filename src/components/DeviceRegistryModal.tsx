@@ -24,12 +24,12 @@ export const DeviceRegistryModal: React.FC<DeviceRegistryModalProps> = ({
   onAddDevice,
 }) => {
   const [name, setName] = useState('');
-  const [category, setCategory] = useState<Device['category']>('laptop');
+  const [category, setCategory] = useState<Device['category']>('telecom-rru');
   const [model, setModel] = useState('');
   const [serialNumber, setSerialNumber] = useState(`SN-${Math.floor(100000 + Math.random() * 900000)}`);
   const [manufactureYear, setManufactureYear] = useState(2023);
-  const [ownerName, setOwnerName] = useState('Dr. Denis Kirui');
-  const [organization, setOrganization] = useState('Apex Renewable Power Ltd');
+  const [ownerName, setOwnerName] = useState('Eng. Peter Odhiambo');
+  const [organization, setOrganization] = useState('Safaricom Tower Operations');
   const [healthScore, setHealthScore] = useState(88);
   const [lifecycleStage, setLifecycleStage] = useState<LifecycleStage>('active-care');
 
@@ -92,12 +92,15 @@ export const DeviceRegistryModal: React.FC<DeviceRegistryModalProps> = ({
             </label>
             <div className="grid grid-cols-3 gap-2">
               {[
-                { id: 'solar-inverter', label: 'Solar Inverter' },
-                { id: 'laptop', label: 'Enterprise Laptop' },
-                { id: 'smartphone', label: 'Smartphone' },
-                { id: 'enterprise-scanner', label: 'Barcode Scanner' },
-                { id: 'industrial-iot', label: 'IoT Gateway' },
-                { id: 'medical-telemetry', label: 'Medical Telemetry' },
+                { id: 'telecom-rru', label: 'Remote Radio Unit (RRU)' },
+                { id: 'telecom-antenna', label: 'MIMO / Panel Antenna' },
+                { id: 'optical-splicer', label: 'Fusion Splicer' },
+                { id: 'otdr-tester', label: 'OTDR & Loss Tester' },
+                { id: 'microwave-link', label: 'Microwave Backhaul' },
+                { id: 'solar-inverter', label: 'BTS Solar Inverter' },
+                { id: 'base-band-unit', label: 'Baseband Unit (BBU)' },
+                { id: 'industrial-iot', label: 'Tower IoT Gateway' },
+                { id: 'laptop', label: 'Field Tech Rugged Laptop' },
               ].map((c) => (
                 <button
                   key={c.id}
@@ -123,7 +126,7 @@ export const DeviceRegistryModal: React.FC<DeviceRegistryModalProps> = ({
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              placeholder="e.g. Solis 50kW Grid-Tie Inverter or ThinkPad T14s"
+              placeholder="e.g. Huawei 5G RRU 5502, Fujikura 90S+ Splicer, or Kathrein MIMO Antenna"
               className="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs md:text-sm text-slate-100 focus:border-amber-500 outline-none"
               required
             />

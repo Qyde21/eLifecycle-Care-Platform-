@@ -33,7 +33,7 @@ export const CircularitySpoke: React.FC<CircularitySpokeProps> = ({
   onRedeemCredits,
   onNavigateSpoke,
 }) => {
-  const [pickupAddress, setPickupAddress] = useState('Nobscott Logistics Depot, Westlands, Nairobi');
+  const [pickupAddress, setPickupAddress] = useState('eLC Telecom Logistics Depot, Enterprise Rd, Nairobi');
   const [scheduled, setScheduled] = useState(false);
   const [redeemSuccess, setRedeemSuccess] = useState<string | null>(null);
 

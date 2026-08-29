@@ -104,33 +104,57 @@ Provide a precise engineering diagnosis in JSON.`;
       }
     }
 
-    // Heuristic Fallback
+    // Heuristic Fallback for Telecom & Industrial hardware
     const symptomLower = (symptoms || '').toLowerCase();
-    let faultName = 'Sub-Circuit Degradation & Component Thermal Drift';
+    let faultName = 'RF Impedance Mismatch & Harmonic Distortion Drift';
     let urgencyScore = 6;
-    let faultProbability = 84;
+    let faultProbability = 86;
     let recommendation: 'repair' | 'replace' | 'refurbish' | 'harvest-spares' = 'repair';
-    let repairCost = 14500;
-    let replaceCost = 85000;
-    let affected = ['Power Management IC', 'Filter Capacitors'];
+    let repairCost = 38500;
+    let replaceCost = 280000;
+    let affected = ['GaN RF Power Amplifier', 'Matching Capacitor Array'];
 
-    if (symptomLower.includes('battery') || symptomLower.includes('charge') || symptomLower.includes('drain')) {
-      faultName = 'Lithium Cell Internal Resistance Surge & BMS Calibration Loss';
-      urgencyScore = 5;
-      faultProbability = 92;
+    if (symptomLower.includes('vswr') || symptomLower.includes('rru') || symptomLower.includes('power amplifier') || symptomLower.includes('pa')) {
+      faultName = 'GaN Transistor Bias Gate Thermal Drift & Sector-2 VSWR Elevation';
+      urgencyScore = 8;
+      faultProbability = 94;
       recommendation = 'repair';
-      repairCost = 11800;
-      replaceCost = 90000;
-      affected = ['BMS Microcontroller', 'High-Density Li-Polymer Cells'];
-    } else if (symptomLower.includes('screen') || symptomLower.includes('display') || symptomLower.includes('crack') || symptomLower.includes('artifact')) {
-      faultName = 'Digitizer Glass Fractures & OLED Matrix Sub-Pixel Line Delamination';
+      repairCost = 42500;
+      replaceCost = 320000;
+      affected = ['GaN RF Power Amplifier Module', 'Low-ESR RF Matching Caps', 'Chassis Thermal Interface'];
+    } else if (symptomLower.includes('splice') || symptomLower.includes('arc') || symptomLower.includes('electrode') || symptomLower.includes('fujikura') || symptomLower.includes('loss')) {
+      faultName = 'Arc Discharge Electrode Oxidation & Precision V-Groove Optical Haze';
+      urgencyScore = 6;
+      faultProbability = 98;
+      recommendation = 'repair';
+      repairCost = 14800;
+      replaceCost = 480000;
+      affected = ['Tungsten Fusion Electrodes', 'Dual CMOS Optical Sensors', 'V-Groove Block'];
+    } else if (symptomLower.includes('antenna') || symptomLower.includes('ret') || symptomLower.includes('mimo') || symptomLower.includes('beam')) {
+      faultName = 'Remote Electrical Tilt (RET) Actuator Motor Gear Latency & Phase Drift';
       urgencyScore = 7;
-      faultProbability = 96;
+      faultProbability = 91;
       recommendation = 'repair';
-      repairCost = 28000;
-      replaceCost = 120000;
-      affected = ['OLED Display Assembly', 'Flex Cable Interconnect'];
-    } else if (symptomLower.includes('overheat') || symptomLower.includes('thermal') || symptomLower.includes('hot') || symptomLower.includes('inverter') || symptomLower.includes('igbt')) {
+      repairCost = 26500;
+      replaceCost = 420000;
+      affected = ['AISG 2.0 RET Actuator Stepper', 'Phase Shifter Rod Mechanism'];
+    } else if (symptomLower.includes('otdr') || symptomLower.includes('optical') || symptomLower.includes('connector') || symptomLower.includes('ferrule')) {
+      faultName = 'FC/APC Ceramic Ferrule Micro-Pitting & Optical Receiver Dynamic Range Loss';
+      urgencyScore = 5;
+      faultProbability = 88;
+      recommendation = 'repair';
+      repairCost = 18500;
+      replaceCost = 350000;
+      affected = ['Ceramic Ferrule Optical Interface', 'Avalanche Photodiode Sub-Board'];
+    } else if (symptomLower.includes('microwave') || symptomLower.includes('backhaul') || symptomLower.includes('diplexer')) {
+      faultName = 'RF Diplexer Bandpass Cavity Moisture Ingress & IF Frequency Drift';
+      urgencyScore = 7;
+      faultProbability = 89;
+      recommendation = 'repair';
+      repairCost = 32000;
+      replaceCost = 290000;
+      affected = ['RF Diplexer Filter', 'IF Synthesizer Board', 'Waveguide Gasket Seal'];
+    } else if (symptomLower.includes('overheat') || symptomLower.includes('thermal') || symptomLower.includes('inverter') || symptomLower.includes('igbt')) {
       faultName = 'Thermal Interface Breakdown & Semiconductor Gate Driver Fatigue';
       urgencyScore = 8;
       faultProbability = 89;

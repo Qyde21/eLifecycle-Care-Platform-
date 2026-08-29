@@ -21,15 +21,15 @@ interface TestingSpokeProps {
 }
 
 const COMMON_SYMPTOM_TAGS = [
-  'Thermal Overheating (>75°C)',
-  'Sudden Shutdown Under Heavy Load',
-  'Rapid Battery Drain (<2 Hours)',
-  'Display Artifacts / Subpixel Lines',
-  'IGBT Inverter Error Code 0x14',
-  'Touch Digitizer Ghost Clicks',
-  'Charging Port Intermittent Disconnect',
-  'Fan Bearing Noise / Stalling',
-  'Wi-Fi 6 Packet Loss & Drop',
+  'Sector-2 PA VSWR Return Loss High (>1.5)',
+  'Arc Discharge Electrode Wear Alarm (4,800+ Arcs)',
+  'CPRI / eCPRI Link Loss of Signal (LOS)',
+  'RET Actuator Motor Torque Fault (AISG 0x24)',
+  'Optical Fusion Splice High Loss (>0.08 dB)',
+  'OTDR Backscatter Event / Fiber Break at 12.4km',
+  'Microwave RF Diplexer Intermodulation Drift',
+  'PA GaN Transistor Thermal Overheat (>85°C)',
+  'BTS Solar DC Bus Under-Voltage Alert',
 ];
 
 export const TestingSpoke: React.FC<TestingSpokeProps> = ({
@@ -37,10 +37,10 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
   onNavigateSpoke,
 }) => {
   const [symptoms, setSymptoms] = useState(
-    activeDevice.currentIssues ? activeDevice.currentIssues.join(', ') : 'Intermittent thermal throttle and battery capacity drop'
+    activeDevice.currentIssues ? activeDevice.currentIssues.join(', ') : 'PA VSWR elevation and optical sync drift'
   );
   const [logs, setLogs] = useState(
-    `[SYS_LOG] Core Temp: 84°C | Rail Voltage: 11.2V | Fan Duty: 100% | BMS Health: ${activeDevice.batteryHealth || 80}%`
+    `[TELECOM_LOG] Device: ${activeDevice.name} | VSWR: 1.48 | RF Output: 43.2 dBm | Temp: 74°C | Optical Sync: Locked | Health: ${activeDevice.healthScore}%`
   );
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<TriageResult | null>(null);

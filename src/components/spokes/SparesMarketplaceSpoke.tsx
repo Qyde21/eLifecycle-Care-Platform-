@@ -33,7 +33,7 @@ export const SparesMarketplaceSpoke: React.FC<SparesMarketplaceSpokeProps> = ({
   const [filterCondition, setFilterCondition] = useState<'All' | 'Harvested' | 'OEM'>('All');
   const [compatibilityOnly, setCompatibilityOnly] = useState(false);
 
-  const categories = ['All', 'Power Electronics', 'Displays', 'Sensors & Optics', 'Batteries & Power', 'Passive Components'];
+  const categories = ['All', 'Power Electronics', 'Sensors & Optics', 'RF & Microwave', 'Optics & Interconnects', 'Passive Components'];
 
   const filteredSpares = sparesList.filter((part) => {
     const matchesSearch = 
