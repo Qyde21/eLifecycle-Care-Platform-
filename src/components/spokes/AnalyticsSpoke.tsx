@@ -108,13 +108,13 @@ export const AnalyticsSpoke: React.FC<AnalyticsSpokeProps> = ({
 
   const handleExportESG = () => {
     const report = {
-      title: 'Nobscott MRO eLC Ecosystem - ESG Fleet Lifecycle Audit',
+      title: 'eLifecycle Care Ecosystem - ESG Fleet Lifecycle Audit',
       generatedDate: new Date().toISOString(),
       fleetSize: totalAssets,
       averagePortfolioHealth: `${avgHealth}%`,
       avoidedScope3CarbonKg: totalCarbonAvoided,
       totalCapitalExpenditureSavedKsh: estimatedSavings,
-      esgRating: aiInsights?.esgComplianceBadge || 'Nobscott Certified Tier-1 Circular Enterprise',
+      esgRating: aiInsights?.esgComplianceBadge || 'eLC Certified Tier-1 Circular Enterprise',
       assetList: devices.map(d => ({
         id: d.id,
         name: d.name,
@@ -128,7 +128,7 @@ export const AnalyticsSpoke: React.FC<AnalyticsSpokeProps> = ({
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `Nobscott-ESG-Audit-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = `eLC-ESG-Audit-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
   };
 

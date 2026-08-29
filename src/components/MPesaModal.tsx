@@ -69,7 +69,7 @@ export const MPesaModal: React.FC<MPesaModalProps> = ({
           phoneNumber,
           amountKsh,
           reference: referenceId,
-          accountName: 'Nobscott eLC Ecosystem',
+          accountName: 'eLifecycle Care MRO Ecosystem',
         }),
       });
       const data = await res.json();
@@ -132,7 +132,7 @@ export const MPesaModal: React.FC<MPesaModalProps> = ({
           <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-4 mb-6">
             <div className="flex justify-between items-center text-sm text-slate-400 mb-1">
               <span>Payee:</span>
-              <span className="font-semibold text-slate-200">Nobscott MRO eLC Hub</span>
+              <span className="font-semibold text-slate-200">eLC MRO Central Hub</span>
             </div>
             <div className="flex justify-between items-center text-sm text-slate-400 mb-2">
               <span>Purpose:</span>
@@ -232,7 +232,7 @@ export const MPesaModal: React.FC<MPesaModalProps> = ({
                   M-PESA SIM TOOLKIT
                 </div>
                 <div className="text-sm font-semibold text-slate-100">
-                  Do you want to pay KSh {amountKsh.toLocaleString()} to Nobscott MRO?
+                  Do you want to pay KSh {amountKsh.toLocaleString()} to eLC MRO?
                 </div>
               </div>
 
@@ -267,7 +267,7 @@ export const MPesaModal: React.FC<MPesaModalProps> = ({
             <div className="text-center py-8 space-y-3">
               <Loader2 className="w-12 h-12 text-emerald-400 animate-spin mx-auto" />
               <h4 className="font-bold text-lg">Verifying with Safaricom Daraja...</h4>
-              <p className="text-xs text-slate-400">Locking transaction and updating Nobscott MRO ledger.</p>
+              <p className="text-xs text-slate-400">Locking transaction and updating eLC MRO ledger.</p>
             </div>
           )}
 

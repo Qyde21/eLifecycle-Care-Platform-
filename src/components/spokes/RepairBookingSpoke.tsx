@@ -32,9 +32,9 @@ interface RepairBookingSpokeProps {
 const REPAIR_STEPS = [
   { label: 'Booking Confirmed', desc: 'Secure slot reserved at EMROC facility' },
   { label: 'Intake & ESD Check', desc: 'Cleanroom barcoding & physical triage verification' },
-  { label: 'Micro-Soldering & Component Overhaul', desc: 'IPC-certified bench replacement using Nobscott harvested/OEM parts' },
+  { label: 'Micro-Soldering & Component Overhaul', desc: 'IPC-certified bench replacement using harvested/OEM certified parts' },
   { label: 'QA Bench Testing & Thermal Telemetry', desc: '4-hour burn-in and voltage curve compliance' },
-  { label: 'Ready for Dispatch / Pickup', desc: 'Certified with Nobscott MRO 12-Month Warranty' },
+  { label: 'Ready for Dispatch / Pickup', desc: 'Certified with MRO 12-Month Warranty' },
 ];
 
 export const RepairBookingSpoke: React.FC<RepairBookingSpokeProps> = ({
@@ -270,7 +270,7 @@ export const RepairBookingSpoke: React.FC<RepairBookingSpokeProps> = ({
                 <span className="text-base font-bold text-emerald-400 font-mono">
                   {deviceActiveRepair.isCoveredByELCI ? 'KSh 0 (ELCI 100%)' : `KSh ${deviceActiveRepair.costKsh.toLocaleString()}`}
                 </span>
-                <span className="text-[10px] text-slate-400 block mt-0.5">Nobscott 12M Warranty</span>
+                <span className="text-[10px] text-slate-400 block mt-0.5">eLC 12M Warranty</span>
               </div>
             </div>
 
@@ -387,10 +387,10 @@ export const RepairBookingSpoke: React.FC<RepairBookingSpokeProps> = ({
           <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-4 text-xs text-slate-400 space-y-2">
             <div className="font-semibold text-slate-200 flex items-center gap-1.5">
               <ShieldCheck className="w-4 h-4 text-amber-400" />
-              Nobscott Quality Assurance Guarantee
+              Central Quality Assurance Guarantee
             </div>
             <p>
-              Every EMROC repair uses certified micro-soldering, includes high-voltage burn-in bench tests, and comes with a 12-month digital warranty backed by Nobscott MRO.
+              Every EMROC repair uses certified micro-soldering, includes high-voltage burn-in bench tests, and comes with a 12-month digital warranty backed by the central MRO hub.
             </p>
           </div>
         </div>

@@ -93,7 +93,7 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-indigo-400 bg-indigo-950/80 px-2 py-0.5 rounded border border-indigo-800/60">
                   Spoke 01 : Testing
                 </span>
-                <span className="text-xs text-slate-400">Powered by Nobscott AI</span>
+                <span className="text-xs text-slate-400">Powered by eLC AI</span>
               </div>
               <h2 className="text-xl md:text-2xl font-bold text-white mt-1">
                 AI-Guided Self-Triage Wizard
@@ -185,7 +185,7 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
                 {loading ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    Running Nobscott Triage Intelligence...
+                    Running eLC Triage Intelligence...
                   </>
                 ) : (
                   <>
@@ -227,7 +227,7 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
               <Loader2 className="w-10 h-10 text-indigo-400 animate-spin" />
               <h4 className="font-bold text-slate-200">Analyzing Micro-Circuitry & Failure Models...</h4>
               <p className="text-xs text-slate-400 max-w-xs">
-                Querying Nobscott MRO historical repair database and component degradation matrices.
+                Querying MRO historical repair database and component degradation matrices.
               </p>
             </div>
           )}
@@ -278,7 +278,7 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
 
                 <div className="grid grid-cols-2 gap-3 mb-3">
                   <div className="p-3 rounded-lg bg-slate-900 border border-slate-800">
-                    <span className="text-[11px] text-slate-400 block">Nobscott Component Repair</span>
+                    <span className="text-[11px] text-slate-400 block">Certified Component Repair</span>
                     <span className="text-lg font-bold text-emerald-400">
                       KSh {result.estimatedRepairCostKsh.toLocaleString()}
                     </span>
@@ -322,7 +322,7 @@ export const TestingSpoke: React.FC<TestingSpokeProps> = ({
                 <div className="bg-slate-950/60 border border-slate-800 rounded-xl p-3.5">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs font-semibold text-slate-300">
-                      Matched Spares in Nobscott Pool (Spoke 4)
+                      Matched Spares in Certified Pool (Spoke 4)
                     </span>
                     <span className="text-[10px] text-cyan-400 font-mono">Instant Dispatch</span>
                   </div>

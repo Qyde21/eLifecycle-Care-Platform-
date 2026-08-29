@@ -108,14 +108,14 @@ export const INITIAL_SPARES: SparePart[] = [
     partNumber: 'NOB-SLS-IGBT-600V',
     category: 'Power Electronics',
     compatibility: ['Solis 50kW Industrial Inverter', 'Huawei SUN2000-50KTL', 'Sungrow SG50CX'],
-    condition: 'Nobscott Certified Harvested',
+    condition: 'Certified Harvested',
     healthRating: 98,
     priceKsh: 28500,
     originalPriceKsh: 62000,
     inStock: 6,
     warrantyMonths: 12,
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott Advanced Microelectronics Lab',
+    testedBy: 'EMROC Advanced Microelectronics Lab',
   },
   {
     id: 'SPR-011',
@@ -123,14 +123,14 @@ export const INITIAL_SPARES: SparePart[] = [
     partNumber: 'NOB-APL-A2780-DISP',
     category: 'Displays',
     compatibility: ['MacBook Pro 16" M2 Max', 'MacBook Pro 16" M1 Pro', 'MacBook Pro 16" M3'],
-    condition: 'Nobscott Certified Harvested',
+    condition: 'Certified Harvested',
     healthRating: 96,
     priceKsh: 34000,
     originalPriceKsh: 78000,
     inStock: 4,
     warrantyMonths: 12,
     image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott Cleanroom Grade-A Bench',
+    testedBy: 'EMROC Cleanroom Grade-A Bench',
   },
   {
     id: 'SPR-012',
@@ -145,7 +145,7 @@ export const INITIAL_SPARES: SparePart[] = [
     inStock: 12,
     warrantyMonths: 24,
     image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott QA Verification Depot',
+    testedBy: 'EMROC QA Verification Depot',
   },
   {
     id: 'SPR-013',
@@ -160,7 +160,7 @@ export const INITIAL_SPARES: SparePart[] = [
     inStock: 15,
     warrantyMonths: 18,
     image: 'https://images.unsplash.com/photo-1609770231080-e321deccc34c?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott Power & Thermal Lab',
+    testedBy: 'EMROC Power & Thermal Lab',
   },
   {
     id: 'SPR-014',
@@ -168,14 +168,14 @@ export const INITIAL_SPARES: SparePart[] = [
     partNumber: 'NOB-SAM-S918-DISP-ORG',
     category: 'Displays',
     compatibility: ['Samsung Galaxy S23 Ultra Enterprise'],
-    condition: 'Nobscott Certified Harvested',
+    condition: 'Certified Harvested',
     healthRating: 99,
     priceKsh: 19500,
     originalPriceKsh: 42000,
     inStock: 8,
     warrantyMonths: 12,
     image: 'https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott Optical Screening Lab',
+    testedBy: 'EMROC Optical Screening Lab',
   },
   {
     id: 'SPR-015',
@@ -190,7 +190,7 @@ export const INITIAL_SPARES: SparePart[] = [
     inStock: 22,
     warrantyMonths: 36,
     image: 'https://images.unsplash.com/photo-1555680202-c86f0e12f086?w=500&auto=format&fit=crop&q=60',
-    testedBy: 'Nobscott High Voltage Safety Testing',
+    testedBy: 'EMROC High Voltage Safety Testing',
   }
 ];
 
@@ -200,8 +200,8 @@ export const INITIAL_REPAIRS: RepairBooking[] = [
     deviceId: 'DEV-8042',
     deviceName: 'Solis 50kW Industrial Inverter',
     serviceType: 'IGBT Module Micro-Soldering & Thermal Overhaul',
-    facilityName: 'EMROC Central Tech City Hub (Nobscott Anchor)',
-    facilityAddress: 'Nobscott Industrial Park, Enterprise Rd, Industrial Area, Nairobi',
+    facilityName: 'EMROC Central Tech City Hub (Anchor Facility)',
+    facilityAddress: 'Enterprise Technology Park, Enterprise Rd, Industrial Area, Nairobi',
     technicianName: 'Denis Kamau',
     technicianLevel: 'Level 4 Master Power Micro-Soldering Tech',
     technicianAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=60',
@@ -293,7 +293,7 @@ export const INITIAL_POLICIES: InsurancePolicy[] = [
       'Accidental screen & liquid damage repair',
       'Free battery renewal when health drops below 80%',
       'Worldwide travel warranty voucher',
-      '100% Nobscott Certified parts guarantee'
+      '100% Certified OEM/Harvested parts guarantee'
     ]
   }
 ];
@@ -301,12 +301,12 @@ export const INITIAL_POLICIES: InsurancePolicy[] = [
 export const EMROC_FACILITIES = [
   {
     id: 'EMROC-01',
-    name: 'Nobscott MRO Central Engineering City (Anchor Facility)',
+    name: 'EMROC Central Engineering City (Anchor Facility)',
     location: 'Enterprise Road, Industrial Area, Nairobi',
     distanceKm: 2.4,
     currentQueue: 4,
     leadTimeHours: 6,
-    certifications: ['Nobscott Master ISO 14001', 'IPC-7711/7721 Micro-Soldering', 'ESD Class 0 Cleanroom'],
+    certifications: ['Master ISO 14001', 'IPC-7711/7721 Micro-Soldering', 'ESD Class 0 Cleanroom'],
     rating: 4.98,
     phone: '+254 700 889 001'
   },
@@ -380,7 +380,7 @@ export const INITIAL_NOTIFICATIONS: AppNotification[] = [
     id: 'NOTIF-INIT-3',
     type: 'repair',
     title: 'EMROC Facility Slot Confirmed',
-    message: 'MacBook Pro 16" intake inspection barcode generated for Nobscott MRO Central Engineering.',
+    message: 'MacBook Pro 16" intake inspection barcode generated for EMROC Central Engineering.',
     timestamp: 'Yesterday',
     read: true,
     spokeTarget: 'repair',

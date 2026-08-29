@@ -32,7 +32,7 @@ app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
     platform: 'eLifecycle Care Platform',
-    mroAnchor: 'Nobscott MRO',
+    mroAnchor: 'Central MRO Core',
     services: 8,
     timestamp: new Date().toISOString(),
   });
@@ -45,7 +45,7 @@ app.post('/api/diagnostics/triage', async (req, res) => {
     const ai = getGeminiClient();
 
     if (ai) {
-      const prompt = `You are the chief diagnostic intelligence engine for Nobscott MRO's eLifecycle Care Platform.
+      const prompt = `You are the chief diagnostic intelligence engine for the eLifecycle Care Platform.
 Analyze the following device symptoms and generate an authoritative technical triage assessment.
 Device: ${deviceName || 'General Electronics'} (${category || 'Device'})
 Device Age: ${ageYears || 2} years
@@ -95,7 +95,7 @@ Provide a precise engineering diagnosis in JSON.`;
             {
               id: 'SPR-AI-01',
               name: parsed.affectedComponents[0] ? `${parsed.affectedComponents[0]} Sub-Assembly` : 'OEM Component Module',
-              partNumber: `NOB-GEN-${Math.floor(1000 + Math.random() * 9000)}`,
+              partNumber: `ELC-GEN-${Math.floor(1000 + Math.random() * 9000)}`,
               priceKsh: Math.round(parsed.estimatedRepairCostKsh * 0.65),
               inStock: true,
             }
@@ -145,7 +145,7 @@ Provide a precise engineering diagnosis in JSON.`;
       faultProbability,
       urgencyScore,
       recommendation,
-      rationale: `Nobscott MRO analysis confirms that high-precision component-level micro-soldering restores 99.2% of factory specifications, preventing ${Math.round(replaceCost * 0.75)} KSh in replacement waste and diverting toxic e-waste.`,
+      rationale: `Certified MRO analysis confirms that high-precision component-level micro-soldering restores 99.2% of factory specifications, preventing ${Math.round(replaceCost * 0.75)} KSh in replacement waste and diverting toxic e-waste.`,
       estimatedRepairCostKsh: repairCost,
       estimatedReplacementCostKsh: replaceCost,
       replacementCostSavingsPercent: Math.round(((replaceCost - repairCost) / replaceCost) * 100),
@@ -156,7 +156,7 @@ Provide a precise engineering diagnosis in JSON.`;
         {
           id: 'SPR-010',
           name: `${affected[0]} Module`,
-          partNumber: `NOB-MOD-${Math.floor(1000 + Math.random() * 9000)}`,
+          partNumber: `ELC-MOD-${Math.floor(1000 + Math.random() * 9000)}`,
           priceKsh: Math.round(repairCost * 0.7),
           inStock: true,
         }
@@ -177,7 +177,7 @@ app.post('/api/screening/grade', async (req, res) => {
     if (ai) {
       const parts: any[] = [
         {
-          text: `You are Nobscott MRO's chief device screening and grading auditor.
+          text: `You are the chief device screening and grading auditor for eLifecycle Care.
 Device: ${deviceName} (${category})
 Operational History: ${operationalHours || 3000} hours
 Drop/Physical Impact History: ${dropHistory || 'None noted'}
@@ -244,7 +244,7 @@ Return strict JSON.`
         const parsed = JSON.parse(response.text.trim());
         return res.json({
           ...parsed,
-          certificateId: `NOB-CERT-${Date.now().toString(36).toUpperCase()}`,
+          certificateId: `ELC-CERT-${Date.now().toString(36).toUpperCase()}`,
           inspectionTimestamp: new Date().toISOString(),
         });
       }
@@ -282,9 +282,9 @@ Return strict JSON.`
       overallScore,
       assignedStage,
       estimatedResidualValueKsh: residualVal,
-      certificateId: `NOB-CERT-${Date.now().toString(36).toUpperCase()}`,
+      certificateId: `ELC-CERT-${Date.now().toString(36).toUpperCase()}`,
       inspectionTimestamp: new Date().toISOString(),
-      inspectorNotes: 'Nobscott Optical & Hardware Inspection benchmark verified. Chassis and internal rail pass Class-B tolerance test.',
+      inspectorNotes: 'Optical & Hardware Inspection benchmark verified. Chassis and internal rail pass Class-B tolerance test.',
       recommendedAction: assignedStage === 'active-care' 
         ? 'Enroll in ELCI preventative maintenance schedule.' 
         : assignedStage === 'refurbish'
@@ -315,7 +315,7 @@ app.post('/api/fleet/insights', async (req, res) => {
 Fleet Size: ${totalDevices} enterprise assets
 Fleet Average Health: ${avgHealth}%
 Avoided E-Waste & Carbon Savings: ${totalCarbonAvoidedKg} kg CO2e
-Total Financial Savings from Nobscott MRO Hub-and-Spoke Ecosystem: ${totalSavingsKsh} KSh.
+Total Financial Savings from eLC MRO Hub-and-Spoke Ecosystem: ${totalSavingsKsh} KSh.
 
 Return JSON with executiveSummary, strategicRecommendations (array of strings), and esgComplianceBadge.`;
 
@@ -343,13 +343,13 @@ Return JSON with executiveSummary, strategicRecommendations (array of strings), 
     }
 
     res.json({
-      executiveSummary: `Through Nobscott MRO's integrated 8-spoke ecosystem, your enterprise fleet has extended asset usable lifespans by an average of 2.8 years, averting ${totalCarbonAvoidedKg || 827} kg of Scope 3 greenhouse emissions.`,
+      executiveSummary: `Through the integrated 8-spoke ecosystem, your enterprise fleet has extended asset usable lifespans by an average of 2.8 years, averting ${totalCarbonAvoidedKg || 827} kg of Scope 3 greenhouse emissions.`,
       strategicRecommendations: [
         'Migrate 14 solar inverters approaching 8,000 operational hours to preventative thermal overhaul at EMROC Central.',
         'Redeem 3,850 Circularity Credits to offset Q4 ELCI fleet insurance premiums by 18%.',
         'Standardize harvested OEM components across tier-2 field units to reduce spares procurement lead times from 14 days to 4 hours.'
       ],
-      esgComplianceBadge: 'Nobscott Certified Tier-1 Circular Enterprise (ISO 14001 / WEEE Aligned)',
+      esgComplianceBadge: 'Certified Tier-1 Circular Enterprise (ISO 14001 / WEEE Aligned)',
       estimatedNextQuarterSavingsKsh: 380000
     });
   } catch (err: any) {
@@ -376,8 +376,8 @@ app.post('/api/mpesa/stk-push', (req, res) => {
       receiptNumber,
       amount: amountKsh || 1000,
       phoneNumber,
-      reference: reference || 'NOBSCOTT-ECARE',
-      accountName: accountName || 'Nobscott MRO Spares & Services',
+      reference: reference || 'ELC-ECARE',
+      accountName: accountName || 'eLC MRO Spares & Services',
       timestamp: new Date().toISOString(),
       message: 'M-Pesa STK Push prompt sent to user handset. Verified and approved.'
     });

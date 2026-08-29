@@ -73,7 +73,7 @@ export const DeviceRegistryModal: React.FC<DeviceRegistryModalProps> = ({
             </div>
             <div>
               <h3 className="text-base font-bold text-white">Unified Device Registry</h3>
-              <p className="text-xs text-slate-400">Onboard asset into Nobscott MRO 8-Spoke ecosystem</p>
+              <p className="text-xs text-slate-400">Onboard asset into eLC 8-Spoke ecosystem</p>
             </div>
           </div>
 

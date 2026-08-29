@@ -260,7 +260,7 @@ export const CircularitySpoke: React.FC<CircularitySpokeProps> = ({
                 </div>
                 <h4 className="font-bold text-slate-100">Collection Scheduled!</h4>
                 <p className="text-xs text-slate-400">
-                  Nobscott green logistics dispatch scheduled for tomorrow morning. <strong className="text-emerald-400">+1,250 Circularity Credits</strong> credited to your account.
+                  Green logistics dispatch scheduled for tomorrow morning. <strong className="text-emerald-400">+1,250 Circularity Credits</strong> credited to your account.
                 </p>
                 <button
                   onClick={() => setScheduled(false)}

@@ -258,7 +258,7 @@ export const ScreeningSpoke: React.FC<ScreeningSpokeProps> = ({
               </div>
               <h4 className="font-bold text-slate-200">No Screening Grading Performed</h4>
               <p className="text-xs text-slate-400 max-w-sm mt-1">
-                Upload a photo or input operational hours on the left to generate Nobscott's 4-stage lifecycle classification.
+                Upload a photo or input operational hours on the left to generate the 4-stage lifecycle classification.
               </p>
             </div>
           )}
@@ -268,7 +268,7 @@ export const ScreeningSpoke: React.FC<ScreeningSpokeProps> = ({
               <Loader2 className="w-10 h-10 text-blue-400 animate-spin" />
               <h4 className="font-bold text-slate-200">Executing Computer Vision & Component Health Analysis...</h4>
               <p className="text-xs text-slate-400 max-w-xs">
-                Verifying optical degradation, calculating residual component value, and issuing Nobscott MRO digital seal.
+                Verifying optical degradation, calculating residual component value, and issuing MRO digital seal.
               </p>
             </div>
           )}
@@ -284,7 +284,7 @@ export const ScreeningSpoke: React.FC<ScreeningSpokeProps> = ({
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="text-[10px] uppercase font-mono tracking-widest text-blue-400 bg-blue-950 px-2 py-0.5 rounded border border-blue-800">
-                        Nobscott Certified Seal
+                        eLC Certified Seal
                       </span>
                       <span className="text-[10px] text-slate-400 font-mono">{result.certificateId}</span>
                     </div>

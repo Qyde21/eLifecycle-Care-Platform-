@@ -70,7 +70,7 @@ export const SPOKES: SpokeDefinition[] = [
     id: 'spares',
     title: 'Spares',
     subtitle: 'OEM & Harvested Marketplace',
-    summary: "Marketplace for OEM-grade and certified-refurbished components. Sourced from Nobscott's pool of harvested and new parts. M-Pesa payment native.",
+    summary: "Marketplace for OEM-grade and certified-refurbished components. Sourced from certified pool of harvested and new parts. M-Pesa payment native.",
     icon: Cpu,
     position: 'bottom-right',
     badgeColor: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40',
@@ -103,7 +103,7 @@ export const SPOKES: SpokeDefinition[] = [
     id: 'insurance',
     title: 'Insurance (ELCI)',
     subtitle: 'Dynamic Age & Health Premiums',
-    summary: "In-app activation of Nobscott's Electronics Lifecycle Care Insurance product. Premiums calculated from device age and health score.",
+    summary: "In-app activation of Electronics Lifecycle Care Insurance product. Premiums calculated from device age and health score.",
     icon: ShieldCheck,
     position: 'left',
     badgeColor: 'bg-violet-500/20 text-violet-300 border-violet-500/40',
@@ -147,12 +147,12 @@ export const HubSpokeNavigator: React.FC<HubSpokeNavigatorProps> = ({
           </h1>
 
           <p className="mt-1 text-sm md:text-base font-semibold text-slate-300 italic">
-            A hub-and-spoke architecture with <strong className="text-amber-400 font-bold not-italic">Nobscott MRO</strong> at the centre
+            A hub-and-spoke architecture with <strong className="text-amber-400 font-bold not-italic">Central MRO Core</strong> at the centre
           </p>
 
           <p className="mt-4 text-xs md:text-sm text-slate-400 leading-relaxed max-w-3xl">
             The eLC App is not a repair-booking app with a few extra features bolted on. It is a complete platform ecosystem:
-            eight integrated service modules that share a single customer identity, a unified device registry, and a common data layer that gets smarter with every interaction. The architecture is deliberately open — designed to onboard certified third-party repair partners, spares suppliers and recyclers — while keeping Nobscott at the centre as the quality anchor and last-resort service provider.
+            eight integrated service modules that share a single customer identity, a unified device registry, and a common data layer that gets smarter with every interaction. The architecture is deliberately open — designed to onboard certified third-party repair partners, spares suppliers and recyclers — while keeping the central MRO core at the centre as the quality anchor and last-resort service provider.
           </p>
         </div>
       </div>
@@ -165,10 +165,10 @@ export const HubSpokeNavigator: React.FC<HubSpokeNavigatorProps> = ({
         {/* Subtle radial grid background */}
         <div className="absolute inset-0 bg-[radial-gradient(#334155_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
 
-        {/* Central Nobscott Hub Node */}
+        {/* Central Hub Node */}
         <div className="relative z-20 flex flex-col items-center my-8 md:my-12">
           <div 
-            id="central-nobscott-hub"
+            id="central-mro-hub"
             className="w-44 h-44 md:w-52 md:h-52 rounded-full bg-gradient-to-b from-slate-900 via-slate-950 to-black border-4 border-amber-500/60 shadow-[0_0_50px_rgba(245,158,11,0.25)] flex flex-col items-center justify-center text-center p-4 transition-all duration-300 hover:scale-105"
           >
             <div className="relative">
@@ -187,7 +187,7 @@ export const HubSpokeNavigator: React.FC<HubSpokeNavigatorProps> = ({
             </div>
 
             <div className="mt-2 text-[10px] text-slate-400 font-semibold px-2 py-0.5 rounded-full bg-slate-800/80 border border-slate-700">
-              Nobscott MRO Anchor
+              Central MRO Anchor
             </div>
           </div>
         </div>
@@ -249,7 +249,7 @@ export const HubSpokeNavigator: React.FC<HubSpokeNavigatorProps> = ({
       <div className="bg-slate-900/50 border border-slate-800/80 rounded-3xl p-6 md:p-8">
         <h2 className="text-xl font-bold text-slate-100 mb-6 flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-amber-400" />
-          What each spoke does in the Nobscott Ecosystem
+          What each spoke does in the eLC Ecosystem
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">

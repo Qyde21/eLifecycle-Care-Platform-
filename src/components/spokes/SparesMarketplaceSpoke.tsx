@@ -83,7 +83,7 @@ export const SparesMarketplaceSpoke: React.FC<SparesMarketplaceSpokeProps> = ({
                 OEM-Grade & Certified-Harvested Spares Pool
               </h2>
               <p className="text-xs md:text-sm text-slate-400 mt-0.5">
-                Sourced from Nobscott's cleanroom harvested supply and tier-1 OEM manufacturers with verified health ratings.
+                Sourced from cleanroom harvested supply and tier-1 OEM manufacturers with verified health ratings.
               </p>
             </div>
           </div>

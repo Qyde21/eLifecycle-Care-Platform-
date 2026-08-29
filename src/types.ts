@@ -97,7 +97,7 @@ export interface SparePart {
   partNumber: string;
   category: string;
   compatibility: string[];
-  condition: 'Nobscott Certified Harvested' | 'OEM Tier-1 Factory New';
+  condition: 'Certified Harvested' | 'OEM Tier-1 Factory New';
   healthRating: number; // e.g. 98%
   priceKsh: number;
   originalPriceKsh?: number;

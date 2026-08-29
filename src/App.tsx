@@ -332,7 +332,7 @@ export default function App() {
       dispatchNotification({
         type: 'system',
         title: 'Ecosystem Care Heartbeat',
-        message: 'All 8 spokes connected to Nobscott MRO Hub. 4 EMROC facilities reporting zero bench queue backlog.',
+        message: 'All 8 spokes connected to Central MRO Hub. 4 EMROC facilities reporting zero bench queue backlog.',
         spokeTarget: 'overview',
       });
     }
@@ -462,7 +462,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-amber-400" />
-            <span className="font-semibold text-slate-300">Nobscott MRO eLifecycle Care Ecosystem</span>
+            <span className="font-semibold text-slate-300">eLifecycle Care MRO Ecosystem</span>
             <span>• Verified Cleanroom Operations</span>
           </div>
           <p>

@@ -90,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   eLifecycle Care
                 </span>
                 <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                  Nobscott MRO Core
+                  MRO Core Hub
                 </span>
               </div>
               <span className="text-[11px] text-slate-400 font-medium block">
