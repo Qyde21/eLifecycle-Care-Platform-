@@ -1,0 +1,6 @@
+{
+  "name": "eLifecycle Care Platform",
+  "description": "A complete electronics lifecycle care ecosystem with hub-and-spoke architecture anchored by Nobscott MRO, featuring AI self-triage testing, device grading screening, repair booking, certified spares marketplace, IoT performance monitoring, circularity recycling credits, ELCI insurance, and B2B ESG fleet analytics.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
